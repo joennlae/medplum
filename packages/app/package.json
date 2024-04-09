@@ -19,9 +19,11 @@
     "dist"
   ],
   "scripts": {
+    "prebuild": "cd ../../ && npm install && npm run build -- --filter=@medplum/core --filter=@medplum/react && cd -",
     "build": "npm run clean && tsc && vite build",
     "clean": "rimraf dist",
     "dev": "vite",
+    "start": "vite",
     "source-map-explorer": "source-map-explorer dist/**/*.js --gzip",
     "test": "jest"
   },
