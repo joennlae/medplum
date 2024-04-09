@@ -69,7 +69,7 @@ function standardHeaders(_req: Request, res: Response, next: NextFunction): void
   // See: https://stackoverflow.com/a/45631261/2051724
   res.set(
     'Content-Security-Policy',
-    "default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';"
+    "default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors *;"
   );
 
   // Disable browser features
